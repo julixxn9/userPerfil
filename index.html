@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+    <header>
+      <h1>Perfil de usuario</h1>
+    </header>
+    
+    <div id="divFrom">
+      <form onsubmit="crearFormulario(event)" id="userForm">
+        <h2>Crear perfil de usurio</h2>
+        <label for="name"
+          >Nombre
+          <input type="text" id="name" required />
+        </label>
+        <label for="edad"
+          >Edad
+          <input type="number" id="edad" required/>
+        </label>
+        <label for="correo"
+          >Correo
+          <input type="email" id="correo" required />
+        </label>
+        <label for="phone"
+          >Telefono
+          <input type="tel" id="phone" required />
+        </label>
+        <label for="direccion"
+          >Direccion
+          <input type="number" id="direccion" required />
+        </label>
+        <label class="insertarImg">
+          <span>Foto de perfil</span>
+          <button type="button" class="botonFoto" onclick="urlImagen()">
+            <span>Seleccionar</span>
+            <img id="img" src="https://placehold.co/100" alt="foto">
+          </button>
+        </label>
+        <button class="button" type="submit">Enviar</button>
+      </form>
+    </div>
+    <div id="perfil">
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

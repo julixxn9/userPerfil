@@ -1,0 +1,219 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(145deg, #121212, #1e1e1e);
+    color: #e4e4e4;
+    min-height: 100vh;
+    padding: 0 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  header h1 {
+    font-size: 2.2rem;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  #divFrom {
+    max-width: 400px;
+    width: 100%;
+    background: #1c1c1c;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  #divFrom:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.8);
+  }
+
+  form img{
+    margin: auto;
+  }
+  
+  form h2 {
+    text-align: center;
+    color: #cccccc;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  label {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #e4e4e4;
+  }
+  
+  label i {
+    font-size: 1.2rem;
+    margin-right: 10px;
+    color: #9b9b9b;
+  }
+  
+  label input {
+    width: 100%; /* Todos los inputs tienen el mismo ancho */
+    max-width: 280px; /* Máximo ancho para evitar desbordamientos */
+    padding: 10px;
+    background: #2a2a2a;
+    border: 1px solid #444;
+    border-radius: 8px;
+    color: #e4e4e4;
+    font-size: 1rem;
+    margin-left: auto; /* Alineación visual correcta */
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  label input:focus {
+    border-color: #6d6dff;
+    box-shadow: 0 0 8px rgba(109, 109, 255, 0.4);
+  }
+
+  .insertarImg{
+    display: flex;
+    gap: 15px;
+  }
+
+  .insertarImg .botonFoto{
+    background-color: #2a2a2a;
+    width: 247px;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border-radius: 10px;
+    border: solid 1px #444;
+    transition: 0.3s;
+  }
+
+  .insertarImg .botonFoto span{
+    font-weight: bold;
+    color: #ffffff;
+  }
+
+  .insertarImg .botonFoto img{
+    width: 70px;
+    border-radius: 50%;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    background: #6d6dff;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background: #5757d1;
+    transform: scale(1.03);
+  }
+  
+  #perfil {
+    width: 400px;
+    background: #1c1c1c;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+    text-align: left; /* Alinear texto a la izquierda */
+    color: #e4e4e4;
+    line-height: 2; /* Espaciado entre líneas para legibilidad */
+  }
+  
+  #perfil p {
+    margin-bottom: 15px; /* Espaciado entre líneas */
+    font-size: 1.1rem; /* Tamaño de fuente uniforme */
+    display: flex; /* Organización horizontal */
+    justify-content: space-between; /* Separar texto clave y dato */
+    align-items: center;
+  }
+  
+  #perfil p span {
+    color: #6d6dff; /* Resaltar los datos del usuario */
+    font-weight: bold; /* Hacer que el dato sea visualmente llamativo */
+    font-size: 1rem; /* Tamaño adecuado para distinguir el dato */
+  }
+  
+  #perfil h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #ffffff;
+    text-transform: uppercase;
+    margin-bottom: 20px; /* Espaciado adicional para separar título */
+    text-align: center; /* Centrar el título */
+  }
+  
+  #perfil img{
+    width: 100px;
+    border-radius: 50%;
+  }
+
+  /* Animaciones */
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Diseño responsive */
+  @media (max-width: 768px) {
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    form h2 {
+      font-size: 1.4rem;
+    }
+  
+    input, button {
+      font-size: 1rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 1.8rem;
+    }
+  
+    form h2 {
+      font-size: 1.2rem;
+    }
+  
+    input, button {
+      font-size: 0.9rem;
+    }
+  }
+  
